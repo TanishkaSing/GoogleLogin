@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "CustomFont";
+}
+.cover{
+    background-color: rgb(255, 255, 255);
+    width: 31em;
+    height: 40em;
+    position: absolute;
+    margin-top: 30px;
+    margin-bottom: 30%;
+    left: 33%;
+    right: auto;
+    border-radius: 0.5em;
+}
+.close {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+  }
+  .close:hover {
+    opacity: 1;
+  }
+  .close:before, .close:after {
+    position: absolute;
+    left: 20px;
+    content: ' ';
+    height: 20px;
+    width: 2px;
+    background-color: #333;
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+
+  .login{
+    padding: 10px 170px;
+    background-color: rgb(212, 48, 75);
+    align-items: center;
+    border-radius: 5px;
+    margin-top:10% ;
+    color: aliceblue;
+    margin-left: 7%;
+    margin-right: 7%;
+    
+  }
+  
+  h5 {
+    width: 85%; 
+    text-align: center; 
+    border-bottom: 1px solid #747171; 
+    line-height: 0.1em;
+    margin: 27px 0 20px; 
+    margin-left: 35px;
+    margin-right: 35px;
+    color: #747171;
+ } 
+
+ h5 span { 
+  background:#fff; 
+  padding:0 10px; 
+}
+
+body {
+  background: rgb(213, 94, 94);
+}
+img{
+  height: 155px;
+  justify-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.email{
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 97.5%;
+  height: 35px;
+}
+.form{
+  text-align: left;
+  color: #747171;
+  margin-left: 7%;
+  margin-right: 6%;
+}
+.password{
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 97.5%;
+  height: 35px;
+
+}
+.check{
+  margin-left: 7%;
+  margin-top:4% ;
+  accent-color:rgb(213, 94, 94);
+  border-radius: 2px;
+  color: #747171;;
+}
+body {
+  background: rgb(213, 94, 94);
+}
+img{
+  height: 80px;
+  justify-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h4 {
+  color: black;
+  text-align: center;
+}
+
+ .userInformation {
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+  
+} 
+
+
+button {
+  justify-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#login{
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+  padding: 10px 120px;
+  
+  margin-right: 7%;
+}
