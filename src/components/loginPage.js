@@ -3,39 +3,28 @@ import "./loginPage.css";
 import socologo from "../assets/soco_logo.png";
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
 import jwt_decode from "jwt-decode";
+import { useNavigate } from "react-router-dom";
+import Cookies from "js-cookie";
 
 const LoginForm = () => {
 
-	const logoutButtonClick = () => {
-		document.getElementById("socologo").hidden = false;
-	   document.getElementById("userInfo").hidden = true
-	}
-	const [user, setUser] = useState({});
+	const navigate = useNavigate()
     return(
-        <body>
-			<div>	
-			{ user && 
-				<div className="userInformation" hidden="true" id="userInfo">
-					<img src={user.picture}></img>
-					<h4>{user.name}</h4>
-					<button id="logoutButton" onClick={logoutButtonClick}>LogOut</button>
-				</div>
-			}
-		</div>	
+        <body>	
 		<div id="socologo" className="cover">
 		<div className="close"></div>	
 		<div className="socologo" > <img src= {socologo}  alt ="socologo"/>
 		</div>
-		
 		<div id="login">
 				<GoogleOAuthProvider clientId="1041401416308-qrtsroic0bq8t280k1fhv7u0l8l561v3.apps.googleusercontent.com">
 				<GoogleLogin
  				 onSuccess={credentialResponse => {
 				var userObject = jwt_decode(credentialResponse.credential);
     			console.log(userObject);
-				setUser(userObject);
-				document.getElementById("userInfo").hidden = false;
-				document.getElementById("socologo").hidden = true;
+				Cookies.set('image', userObject.picture)
+				Cookies.set('name', userObject.name)
+				navigate('/user')
+				
   				}}
   			onError={() => {
     	console.log('Login Failed');
